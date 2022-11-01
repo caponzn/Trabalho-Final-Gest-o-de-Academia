@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Visão;
-
-/**
- *
- * @author WAZ-PC
- */
 public class vPrincipal extends javax.swing.JFrame {
 
     /**
@@ -33,6 +24,7 @@ public class vPrincipal extends javax.swing.JFrame {
         btCadFuncionario = new javax.swing.JMenuItem();
         btCadFornecedor = new javax.swing.JMenuItem();
         btCadProduto = new javax.swing.JMenuItem();
+        btCadFicha = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +57,14 @@ public class vPrincipal extends javax.swing.JFrame {
         });
         btCadastrar.add(btCadProduto);
 
+        btCadFicha.setText("Ficha de Saúde");
+        btCadFicha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadFichaActionPerformed(evt);
+            }
+        });
+        btCadastrar.add(btCadFicha);
+
         MenuPrincipal.add(btCadastrar);
 
         setJMenuBar(MenuPrincipal);
@@ -86,6 +86,9 @@ public class vPrincipal extends javax.swing.JFrame {
     private void btCadAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadAlunoActionPerformed
         new vCadAluno(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_btCadAlunoActionPerformed
+
+    private void btCadFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadFichaActionPerformed
+        new vCadFichaPrincipal(this, rootPaneCheckingEnabled).setVisible(true);    }//GEN-LAST:event_btCadFichaActionPerformed
 
     private void btCadFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadFornecedorActionPerformed
         new vCadFornecedor(this, rootPaneCheckingEnabled).setVisible(true);
@@ -133,6 +136,7 @@ public class vPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar MenuPrincipal;
     private javax.swing.JMenuItem btCadAluno;
+    private javax.swing.JMenuItem btCadFicha;
     private javax.swing.JMenuItem btCadFornecedor;
     private javax.swing.JMenuItem btCadFuncionario;
     private javax.swing.JMenuItem btCadProduto;
