@@ -58,6 +58,11 @@ public class vPrincipal extends javax.swing.JFrame {
         btCadastrar.add(btCadFornecedor);
 
         btCadProduto.setText("Produto");
+        btCadProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCadProdutoActionPerformed(evt);
+            }
+        });
         btCadastrar.add(btCadProduto);
 
         MenuPrincipal.add(btCadastrar);
@@ -85,6 +90,10 @@ public class vPrincipal extends javax.swing.JFrame {
     private void btCadFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadFornecedorActionPerformed
         new vCadFornecedor(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_btCadFornecedorActionPerformed
+
+    private void btCadProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadProdutoActionPerformed
+        new vCadProduto(this, rootPaneCheckingEnabled).setVisible(true);
+    }//GEN-LAST:event_btCadProdutoActionPerformed
 
     /**
      * @param args the command line arguments
