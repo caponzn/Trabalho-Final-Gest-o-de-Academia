@@ -21,10 +21,6 @@ public class vPrincipal extends javax.swing.JFrame {
         MenuPrincipal = new javax.swing.JMenuBar();
         btCadastrar = new javax.swing.JMenu();
         btCadAluno = new javax.swing.JMenuItem();
-        btCadFuncionario = new javax.swing.JMenuItem();
-        btCadFornecedor = new javax.swing.JMenuItem();
-        btCadProduto = new javax.swing.JMenuItem();
-        btCadFicha = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,33 +33,6 @@ public class vPrincipal extends javax.swing.JFrame {
             }
         });
         btCadastrar.add(btCadAluno);
-
-        btCadFuncionario.setText("Funcionario");
-        btCadastrar.add(btCadFuncionario);
-
-        btCadFornecedor.setText("Fornecedor");
-        btCadFornecedor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btCadFornecedorActionPerformed(evt);
-            }
-        });
-        btCadastrar.add(btCadFornecedor);
-
-        btCadProduto.setText("Produto");
-        btCadProduto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btCadProdutoActionPerformed(evt);
-            }
-        });
-        btCadastrar.add(btCadProduto);
-
-        btCadFicha.setText("Ficha de Saúde");
-        btCadFicha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btCadFichaActionPerformed(evt);
-            }
-        });
-        btCadastrar.add(btCadFicha);
 
         MenuPrincipal.add(btCadastrar);
 
@@ -86,17 +55,6 @@ public class vPrincipal extends javax.swing.JFrame {
     private void btCadAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadAlunoActionPerformed
         new vCadAluno(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_btCadAlunoActionPerformed
-
-    private void btCadFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadFichaActionPerformed
-        new vCadFichaPrincipal(this, rootPaneCheckingEnabled).setVisible(true);    }//GEN-LAST:event_btCadFichaActionPerformed
-
-    private void btCadFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadFornecedorActionPerformed
-        new vCadFornecedor(this, rootPaneCheckingEnabled).setVisible(true);
-    }//GEN-LAST:event_btCadFornecedorActionPerformed
-
-    private void btCadProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadProdutoActionPerformed
-        new vCadProduto(this, rootPaneCheckingEnabled).setVisible(true);
-    }//GEN-LAST:event_btCadProdutoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,10 +94,6 @@ public class vPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar MenuPrincipal;
     private javax.swing.JMenuItem btCadAluno;
-    private javax.swing.JMenuItem btCadFicha;
-    private javax.swing.JMenuItem btCadFornecedor;
-    private javax.swing.JMenuItem btCadFuncionario;
-    private javax.swing.JMenuItem btCadProduto;
     private javax.swing.JMenu btCadastrar;
     // End of variables declaration//GEN-END:variables
 }
